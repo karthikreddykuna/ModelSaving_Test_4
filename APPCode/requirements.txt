@@ -7,4 +7,3 @@ streamlit
 feature-engine
 pandas_profiling
 streamlit-pandas-profiling
-fsspec
