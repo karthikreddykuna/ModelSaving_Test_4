@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 
 # NOTE: Make sure that the outcome column is labeled 'target' in the data file
-tpot_data = pd.read_csv('https://raw.githubusercontent.com/karthikreddykuna/ModelSaving_Test_4/master/APPCode/prepared_data.csv')
+tpot_data = pd.read_csv('ModelSaving_Test_4/Model/https://raw.githubusercontent.com/karthikreddykuna/ModelSaving_Test_4/master/APPCode/prepared_data.csv')
 features = tpot_data.drop('target', axis=1)
 training_features, testing_features, training_target, testing_target = \
             train_test_split(features, tpot_data['target'], random_state=None)
@@ -65,7 +65,6 @@ if 'float' in str(type(prediction[0])):
     st.write(round(prediction[0],2))
 else:
     st.write(prediction[0])
-
 # Dataset
 st.subheader('Data Set')
 if len(target_encoder_location) > 5:
@@ -73,7 +72,6 @@ if len(target_encoder_location) > 5:
 else:
     df['target'] = tpot_data['target']
 st.write(df)
-
 #pandas profling-report
 st.subheader('Profiling Report of your dataset')
 pr = df.profile_report()
